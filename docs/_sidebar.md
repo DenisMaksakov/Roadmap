@@ -1,4 +1,4 @@
 <!-- docs/_sidebar.md -->
 
-* [Главая](/)
-* [Docsify](/docsify/main.md)
+* [Главная](/)
+* [Про Docsify](/docsify/main.md)
