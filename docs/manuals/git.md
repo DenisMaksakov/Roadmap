@@ -42,24 +42,22 @@ graph TD;
 ```
 Системные настройки применяются ко всем пользователям и репозиториям на данном компьютере. Эти настройки хранятся в файле `/etc/gitconfig`.
 ```bash
+# Просмотр системных настроек
 git config --system --list
-
-sudo git config --system user.name "Ваше Имя"
-sudo git config --system user.email "ваш.email@example.com"
 ```
 Глобальные настройки применяются ко всем репозиториям текущего пользователя. Эти настройки хранятся в файле `~/.gitconfig` или `~/.config/git/config`.
 ```bash
+# Просмотр глобальных настроек
 git config --global --list
 
+# Установка глобальных настроек
 git config --global user.name "Ваше Имя"
 git config --global user.email "ваш.email@example.com"
 ```
 Локальные настройки применяются только к текущему репозиторию. Эти настройки хранятся в файле `.git/config` внутри каталога репозитория.
 ```bash
-git config --system --list
-
-sudo git config --system user.name "Ваше Имя"
-sudo git config --system user.email "ваш.email@example.com"
+# Просмотр локальных настроек
+git config --local --list
 ```
 >Если настройка определена на нескольких уровнях, Git использует значение с наивысшим приоритетом (локальный уровень имеет высший приоритет, затем глобальный, и наконец системный).
 
