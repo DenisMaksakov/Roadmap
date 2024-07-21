@@ -32,10 +32,10 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## Настройки Git
+## Настройка Git
 
 ```mermaid
-graph TD;
+graph LR;
     A([Настройки Git бывают трех видов]) --> B[Системные настройки];
     A --> C[Глобальные настройки];
     A --> D[Локальные настройки];
@@ -50,9 +50,9 @@ git config --system --list
 # Просмотр глобальных настроек
 git config --global --list
 
-# Установка глобальных настроек
-git config --global user.name "Ваше Имя"
-git config --global user.email "ваш.email@example.com"
+# Настройка имени пользователя и электронной почты
+git config --global user.name "Name Surname"
+git config --global user.email "address@mail.com"
 ```
 Локальные настройки применяются только к текущему репозиторию. Эти настройки хранятся в файле `.git/config` внутри каталога репозитория.
 ```bash
@@ -60,6 +60,32 @@ git config --global user.email "ваш.email@example.com"
 git config --local --list
 ```
 >Если настройка определена на нескольких уровнях, Git использует значение с наивысшим приоритетом (локальный уровень имеет высший приоритет, затем глобальный, и наконец системный).
+
+## Как создать локальный Git-репозиторий
+```bash
+# Создание нового репозитория
+git init
+
+# Клонирование существующего репозитория
+git clone https://url-к-репозиторию.git
+```
+## Проверка состояния репозитория
+```bash
+# Проверка состояния репозитория
+git status
+```
+
+```mermaid
+stateDiagram
+classDef  cl_unm  fill:green,color:white
+classDef  cl_mod  fill:red,color:white
+classDef  cl_sta  fill:yellow
+Untracked  -->  Staged  : git add file / Добавляем файл в Индекс
+Unmodified  -->  Modified  : Редактируем файл, уже отслеживаемый Git
+Modified:::cl_mod  -->  Staged  : git add file / Добавляем файл в Индекс
+Unmodified  -->  Untracked  : git rm file / Файл станет неотслеживаемым
+Staged:::cl_sta  -->  Unmodified:::cl_unm  : git commit -m "Фиксируем добавленные в индекс изменения"
+```
 
 
 
@@ -107,4 +133,5 @@ git config --local --list
 
 ### Восстановление и отмена изменений
 - **Команды `git checkout`, `git reset` и `git revert`**: Восстановление предыдущих версий файлов, отмена коммитов и откат изменений.
+
 
