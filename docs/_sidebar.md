@@ -1,5 +1,5 @@
 * [Roadmap](/)
-* Tools
+* [Tools](/tools/README.md)
   * [Про Docsify](/tools/docsify.md)
   * [Про Git](/tools/git.md)
   * [Markdown](/tools/markdown.md)
