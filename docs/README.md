@@ -26,7 +26,7 @@ Tool --- Git
 end
 
 root((ML Engineer))
-click Docsify href "#/manuals/docsify"
-click Markdown href "#/manuals/markdown"
-click Git href "#/manuals/git"
+click Docsify href "#/tools/docsify"
+click Markdown href "#/tools/markdown"
+click Git href "#/tools/git"
 ```

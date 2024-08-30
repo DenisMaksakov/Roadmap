@@ -1,6 +1,4 @@
-<!-- docs/_sidebar.md -->
-
-* [Главная](/)
-* [Про Docsify](/manuals/docsify.md)
-* [Про Git](/manuals/git.md)
-* [Markdown](/manuals/markdown.md)
+* [Roadmap](/)
+* [Про Docsify](/tools/docsify.md)
+* [Про Git](/tools/git.md)
+* [Markdown](/tools/markdown.md)
