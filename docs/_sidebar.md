@@ -1,4 +1,6 @@
 * [Roadmap](/)
+* [Databases](/databases/README.md)
+  * [SQL](/databases/sql.md)
 * [Tools](/tools/README.md)
   * [Про Docsify](/tools/docsify.md)
   * [Про Git](/tools/git.md)
